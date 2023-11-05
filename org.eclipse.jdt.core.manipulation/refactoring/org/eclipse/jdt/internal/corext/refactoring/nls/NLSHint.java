@@ -257,8 +257,8 @@ public class NLSHint {
 		return null;
 	}
 
-	private static String stripQuotes(String str) {
-		return str.substring(1, str.length() - 1);
+	public static String stripQuotes(String literalValue) {
+		return StringLiteralToPropertiesValue.stringLiteralToPropertiesValue(literalValue);
 	}
 
 	private static NLSLine[] createRawLines(ICompilationUnit cu) {
